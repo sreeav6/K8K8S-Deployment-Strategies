@@ -35,7 +35,9 @@ In Kubernetes we have multiple strategies among them we are discussing few of th
    2) You will also create ingress to both main and canary but while creatin ingress with canary you will writing annonations part like below
       
       annotations:
+
           nginx.ingress.kubernetes.io/canary: \"true\"
+      
           nginx.ingress.kubernetes.io/canary-weight: \"50\"
       
    4) Ingress controller will watch both main and canary ingress resources and created LB and tell LB please send the traffic 50% to canary and 50% to main.

@@ -41,6 +41,23 @@ In Kubernetes we have multiple strategies among them we are discussing few of th
 
    5) Also please go through the above canary example as well.
 
+3) Blue-Green Deployment:
+   -----
+      a) It is the most costly and safe deployment strategy
+
+      b) We will have having similar set of deployment and services for both version v1 and v2 applications kept on running where resources will be utilized
+      identically
+
+      c) It is safest deployment where you need to update the ingress resource from service of Blue(v1) to service of Green(v2) where LB will point to the         greensite(v2)
+
+      d) If any of the changes will not seem working properly we can edit that ingress resource and the ingress controller pod will get updated where LB           will point to Blue site immediately.
+
+Note:
+-----
+If you are praticising with minikube you need to start (minikube start) and enable addon like  (minikube addons enable ingress) and once you want to 
+test the application you need to ssh (minikube ssh). But with other clouds like EKS and GKE you can directly test the application with curl which is mentioned in the above canary nginx example.
+
+      
           
    
 

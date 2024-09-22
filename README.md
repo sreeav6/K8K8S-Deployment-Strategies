@@ -1,1 +1,1 @@
-# K8K8S-Deployment-Strategies
+# K8S-Deployment-Strategies

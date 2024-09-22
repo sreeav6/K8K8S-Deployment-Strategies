@@ -1,6 +1,6 @@
 # K8S-Deployment-Strategies
 
-In Kubernetes we have multiple strategies among them we are discussing few of them here
+In Kubernetes we have multiple strategies among them we are discussing few of them here.
 ---------------------------------------------------
 1) Rolling upate:
    ----------------------

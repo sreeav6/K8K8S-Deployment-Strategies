@@ -26,5 +26,22 @@ In Kubernetes we have multiple strategies among them we are discussing few of th
 
      ** https://kubernetes.github.io/ingress-nginx/examples/canary/**
 
-   d) We can immediate revert back the changes to the old version if the set of users tested new application is not upto the mark.
+   d) We can immediate revert back the changes(in annonations part) to the old version if the set of users tested new application is not upto the mark.
+
+   As a summary in the above nginx canary deployment:
+   ------
+   1) You will creating main and canary deployments and services to the both main and canary
+
+   2) You will also create ingress to both main and canary but while creatin ingress with canary you will writing annonations part like below
+      annotations:
+          nginx.ingress.kubernetes.io/canary: \"true\"
+          nginx.ingress.kubernetes.io/canary-weight: \"50\"
+      
+   4) Ingress controller will watch both main and canary ingress resources and created LB and tell LB please send the traffic 50% to canary and 50% to main.
+
+   5) Also please go through the above canary example as well.
+
+          
+   
+
    

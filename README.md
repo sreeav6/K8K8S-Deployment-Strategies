@@ -33,6 +33,7 @@ In Kubernetes we have multiple strategies among them we are discussing few of th
    1) You will creating main and canary deployments and services to the both main and canary
 
    2) You will also create ingress to both main and canary but while creatin ingress with canary you will writing annonations part like below
+      
       annotations:
           nginx.ingress.kubernetes.io/canary: \"true\"
           nginx.ingress.kubernetes.io/canary-weight: \"50\"

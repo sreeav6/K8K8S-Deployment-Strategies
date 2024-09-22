@@ -24,7 +24,7 @@ In Kubernetes we have multiple strategies among them we are discussing few of th
 
    c) We require Ingress in order to test this kind of deployment. As a example we can take nginx canary deployment.
 
-  ** https://kubernetes.github.io/ingress-nginx/examples/canary/**
+     ** https://kubernetes.github.io/ingress-nginx/examples/canary/**
 
    d) We can immediate revert back the changes to the old version if the set of users tested new application is not upto the mark.
    
